@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<header th:fragment="header" class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+    <!-- Navbar Light-->
+<!--    <header class="navbar navbar-expand-lg navbar-light fixed-top bg-light">-->
+        <div class="container-fluid navbar-inner">
+            <!-- navbar brand--><a class="navbar-brand" style="min-width: 100px;" href="/"><img width="100" src="/img/logo-dark.png" alt="MStore"/></a>
+            <!-- navbar collapse area-->
+            <div class="collapse navbar-collapse" id="menu">
+                <!-- Site menu-->
+                <ul class="navbar-nav">
+
+                    <!-- 상품 카테고리 -->
+                    <li class="nav-item dropdown mega-dropdown dropdown-more"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">상품 카테고리<i data-feather="more-horizontal"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <div class="dropdown-column">
+                                    <div class="bg-position-center bg-no-repeat bg-size-cover text-center px-3 py-4 mb-3" style="background-image: url(/img/megamenu/cat_bg02.jpg);">
+                                        <h3 class="h5 text-white text-shadow my-3">의복</h3>
+                                    </div>
+                                    <div class="widget widget-links">
+                                        <ul>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Clothing</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Shoes</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Handbags &amp; Backpacks</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Hats &amp; Caps</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Sunglasses</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Watches</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Accessories</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-column">
+                                    <div class="bg-position-center bg-no-repeat bg-size-cover text-center px-3 py-4 mb-3" style="background-image: url(/img/megamenu/cat_bg01.jpg);">
+                                        <h3 class="h5 text-white text-shadow my-3">전자제품</h3>
+                                    </div>
+                                    <div class="widget widget-links">
+                                        <ul>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Computers &amp; Accessories</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">TV, Video &amp; Audio</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Smartphones &amp; Tablets</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Cameras, Photo &amp; Video</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Headphones</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Wearable Electronics</span></a></li>
+                                            <li><a href="#"><i class="widget-categories-indicator" data-feather="chevron-right"></i><span class="font-size-sm">Video Games</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <!-- 상단 메뉴 -->
+                    <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                        <a class="nav-link" href="/admin/item/new"><i class="mr-1" data-feather="plus-square"></i>상품등록</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                        <a class="nav-link" href="/admin/items"><i class="mr-1" data-feather="database"></i>상품관리</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/cart"><i class="mr-1" data-feather="shopping-cart"></i>장바구니</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                        <a class="nav-link" href="/orders"><i class="mr-1" data-feather="file-text"></i>구매이력</a>
+                    </li>
+<!--                    <li class="nav-item" sec:authorize="isAnonymous()">-->
+<!--                        <a class="nav-link" href="/members/login">로그인</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                        <a class="nav-link" href="/members/logout">로그아웃</a>-->
+<!--                    </li>-->
+
+<!--                    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle" href="#"><i class="mr-1" data-feather="plus-square"></i>상품등록</a></li>-->
+<!--                    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle" href="#"><i class="mr-1" data-feather="database"></i>상품관리</a></li>-->
+<!--                    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle" href="#"><i class="mr-1" data-feather="shopping-cart"></i>장바구니</a></li>-->
+<!--                    <li class="nav-item dropdown mega-dropdown"><a class="nav-link dropdown-toggle" href="#"><i class="mr-1" data-feather="file-text"></i>구매이력</a></li>-->
+                </ul>
+            </div>
+            <!-- navbar buttons-->
+            <div class="navbar-btns">
+                <div class="navbar-btns-inner">
+                    <a class="navbar-btn navbar-collapse-hidden" href="/members/login"  sec:authorize="isAnonymous()">
+                        <i class="mx-auto mb-1" data-feather="log-in"></i>로그인
+                    </a>
+                    <a class="navbar-btn navbar-collapse-hidden" href="/members/logout"  sec:authorize="isAuthenticated()">
+                        <i class="mx-auto mb-1" data-feather="log-out"></i>로그아웃
+                    </a>
+                </div>
+            </div>
+        </div>
+<!--    </header>-->
+
+</header>
+
+</html>

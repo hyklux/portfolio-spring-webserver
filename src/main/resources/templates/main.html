@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+
+</th:block>
+
+<div layout:fragment="content">
+
+    <!-- Hero slider-->
+    <section class="container-fluid bg-secondary px-0">
+        <div class="row no-gutters align-items-center">
+            <div class="col-md-6">
+                <div class="mx-auto bg-light my-sm-4" style="max-width: 37rem;">
+                    <div class="owl-carousel trigger-carousel" data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: false, &quot;loop&quot;: true, &quot;autoHeight&quot;: true }" data-target-carousel="#target-carousel">
+                        <div class="py-5 px-3 px-sm-5"><img class="d-block mb-2" src="/img/main/netmarble_store.PNG" width="180" alt="Reebok">
+                            <h2 class="mb-1">BTS 콜라보 컬렉션</h2>
+                            <h3 class="font-weight-light opacity-70 pb-3">시작가 30만원</h3><a class="btn btn-primary" href="">당장 구매하기<i class="ml-2" data-feather="arrow-right"></i></a>
+                        </div>
+                        <div class="py-5 px-3 px-sm-5"><img class="d-block mb-2" src="/img/home/apparel/hero-slide-logo02.png" width="129" alt="The North Face">
+                            <h2 class="mb-1">드럼세탁기 신상</h2>
+                            <h3 class="font-weight-light opacity-70 pb-3">250만원</h3><a class="btn btn-primary" href="shop-style1-ls.html">구매하기<i class="ml-2" data-feather="arrow-right"></i></a>
+                        </div>
+                        <div class="py-5 px-3 px-sm-5"><img class="d-block mb-2" src="/img/home/apparel/hero-slide-logo03.png" width="182" alt="Calvin Klein">
+                            <h2 class="mb-1">닌텐도 신상</h2>
+                            <h3 class="font-weight-light opacity-70 pb-3">50만원</h3><a class="btn btn-primary" href="shop-style1-ls.html">구매하기<i class="ml-2" data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="owl-carousel" id="target-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: false, &quot;loop&quot;: true, &quot;mouseDrag&quot;: false, &quot;touchDrag&quot;: false, &quot;pullDrag&quot;: false, &quot;animateOut&quot;: &quot;fadeOut&quot; }"
+                >
+                    <img class="ml-auto mr-0" src="img/home/apparel/hero-slide01.jpg" alt="BTS" >
+                    <img class="ml-auto mr-0" src="img/home/apparel/hero-slide02.jpg" alt="Hoodie Collection">
+                    <img class="ml-auto mr-0" src="img/home/apparel/hero-slide03.jpg" alt="Sunglasses Collection">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Popular categories (carousel)-->
+    <section class="container py-5 mt-3">
+        <h2 class="h3 text-center pb-4">많이 팔리는 카테고리</h2>
+        <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;margin&quot;: 30, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1},&quot;460&quot;:{&quot;items&quot;:2}, &quot;768&quot;:{&quot;items&quot;:3}} }">
+            <div class="card border-0"><a class="card-img-tiles" href="shop-style1-ls.html">
+                <div class="main-img"><img src="img/shop/apparel/categories/01.jpg" alt="Clothing"></div></a>
+                <div class="card-body border mt-n1 py-4 text-center">
+                    <h2 class="h5 mb-1">의류</h2>
+
+                    <span class="d-block mb-3 font-size-xs text-muted">최저가<span class='font-weight-semibold'>10,000원</span></span><a class="btn btn-pill btn-outline-primary btn-sm" href="shop-style1-ls.html">Shop clothing</a>
+                </div>
+            </div>
+            <div class="card border-0">
+                <a class="card-img-tiles" href="shop-style1-ls.html">
+                    <div class="main-img"><img src="img/shop/apparel/categories/04.jpg" alt="Shoes"></div>
+                </a>
+                <div class="card-body border mt-n1 py-4 text-center">
+                    <h2 class="h5 mb-1">신발</h2><span class="d-block mb-3 font-size-xs text-muted">최저가 <span class='font-weight-semibold'>10,000원</span></span><a class="btn btn-pill btn-outline-primary btn-sm" href="shop-style1-ls.html">Shop shoes</a>
+                </div>
+            </div>
+            <div class="card border-0">
+                <a class="card-img-tiles" href="shop-style1-ls.html">
+                    <div class="main-img"><img src="img/shop/apparel/categories/07.jpg" alt="Bags"></div>
+                </a>
+                <div class="card-body border mt-n1 py-4 text-center">
+                    <h2 class="h5 mb-1">게임</h2><span class="d-block mb-3 font-size-xs text-muted">최저가<span class='font-weight-semibold'>5,000원</span></span><a class="btn btn-pill btn-outline-primary btn-sm" href="shop-style1-ls.html">Shop bags</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Brands carousel-->
+    <section class="container pb-4 mt-md-3">
+        <h2 class="h3 text-center pb-4">브랜드</h2>
+        <div class="owl-carousel" data-owl-carousel="{ &quot;nav&quot;: false, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;margin&quot;: 30, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 4000, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:2, &quot;margin&quot;: 15},&quot;460&quot;:{&quot;items&quot;:3, &quot;margin&quot;: 15}, &quot;768&quot;:{&quot;items&quot;:4}} }">
+
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/01.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/02.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/03.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/04.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/05.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/06.png" style="width: 150px;" alt="Brand"></a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/07.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/08.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/09.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/10.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/11.png" style="width: 150px;" alt="Brand">
+            </a>
+            <a class="d-block bg-white border py-3 py-sm-4" href="#">
+                <img class="d-block mx-auto" src="img/shop/apparel/brands/12.png" style="width: 150px;" alt="Brand">
+            </a>
+        </div>
+    </section>
+    <!-- Sale promo-->
+    <section class="container-fluid mb-5 mt-4">
+        <div class="bg-size-cover bg-position-center py-5" style="background-image: url(/img/home/apparel/promo-banner.jpg);">
+            <div class="row py-lg-4">
+                <div class="col-lg-5 col-md-8 offset-xl-2 offset-lg-1">
+                    <div class="px-3 px-lg-0">
+                        <h3 class="font-weight-light">특별 할인<span class="badge badge-danger font-size-xs ml-3 align-middle">50% 할인</span></h3>
+                        <h2 class="h1 mb-4">갓 오브 워</h2>
+                        <h4 class="mb-3 font-weight-light">서두르세요! 흑우 에디션!</h4>
+                        <a class="btn btn-primary" href="#">바로 구매하기<i class="ml-2" data-feather="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured products grid-->
+    <section class="container pt-3 pb-4">
+        <h2 class="h3 text-center pb-4">추천 상품</h2>
+        <div class="row">
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/01.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Men's jeans</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Gues Slim Taper Fit Jeans</a></h3><span class="text-primary">$124.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="badge badge-success rounded-0">&starf; 절찬판매중</span><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/04.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Hats &amp; Caps</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">47Brand Denim Cap</a></h3><span class="text-primary">$21.50</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/03.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Men's shoes</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Calvin Klein Jeans Keds</a></h3><span class="text-primary">$125.00</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/06.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Sunglasses</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Medicine Chameleon Sunglasses</a></h3><span class="text-muted">Out of stock</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="badge badge-danger rounded-0">Sale -10%</span><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/08.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Women's sneakers</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Reebok Classic Sneakers Pyro</a></h3><span class="text-primary">
+                    <del class="text-muted mr-1">$105.00</del>$94.50</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/07.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Dresses</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Floral Printed Maxi Dress</a></h3><span class="text-primary">$47.99</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/09.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Handbags</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Roxy Cotton Handbag</a></h3><span class="text-primary">$52.00</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Product-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card mb-4">
+                    <div class="product-thumb"><a class="product-thumb-link" href="shop-single-apparel.html"></a><span class="product-wishlist-btn" data-toggle="tooltip" data-placement="left" title="장바구니 담기"><i data-feather="shopping-cart"></i></span><img src="img/shop/apparel/11.jpg" alt="Product"></div>
+                    <div class="product-card-body text-center"><a class="product-meta" href="#">Men's tshirts</a>
+                        <h3 class="product-card-title"><a href="shop-single-apparel.html">Medicine Tshirt Sailor Spirit</a></h3><span class="text-primary">$17.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product widgets-->
+    <section class="container pt-sm-3 pb-4 pb-md-5">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 d-block d-sm-none d-md-block mb-3">
+                <!-- Promo banner--><a class="d-block text-decoration-0 mx-auto" href="#" style="max-width: 24rem;">
+                <div class="bg-secondary">
+                    <div class="px-3 pt-4 text-center">
+                        <h4 class="font-size-sm font-weight-normal pt-1 mb-2">2022 Winter</h4>
+                        <h4 class="h5 pb-2">Hoodie Collection</h4>
+                        <div class="btn btn-primary btn-sm">구매하기</div>
+                    </div><img src="img/shop/banner01.jpg" alt="Promo banner">
+                </div></a>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 py-3">
+                <div class="widget widget-featured-entries">
+                    <h3 class="widget-title font-size-lg">베스트 셀러</h3>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/01.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Keds - Kickstart Pom Pom</a></h6>
+                            <p class="featured-entry-meta">$42.99</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/02.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Nike - Brasilia Medium Backpack</a></h6>
+                            <p class="featured-entry-meta">$27.99</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/03.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Guess - GU7295</a></h6>
+                            <p class="featured-entry-meta">$38.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/11.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Adidas Originals Cap</a></h6>
+                            <p class="featured-entry-meta">$35.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/13.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Big Star Flip Tops</a></h6>
+                            <p class="featured-entry-meta">$10.60</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-2 py-3">
+                <div class="widget widget-featured-entries">
+                    <h3 class="widget-title font-size-lg">신상품</h3>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/08.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">The North Face Hoodie</a></h6>
+                            <p class="featured-entry-meta">$134.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/09.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Medicine Chameleon Sunglasses</a></h6>
+                            <p class="featured-entry-meta">$47.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/10.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Adidas Performance Hat</a></h6>
+                            <p class="featured-entry-meta">$19.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/07.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Calvin Klein Jeans Keds</a></h6>
+                            <p class="featured-entry-meta">$125.00</p>
+                        </div>
+                    </div>
+                    <div class="media"><a class="featured-entry-thumb" href="#"><img src="img/shop/widget/12.jpg" width="64" alt="Product thumb"></a>
+                        <div class="media-body">
+                            <h6 class="featured-entry-title"><a href="#">Roxy Cotton Handbag</a></h6>
+                            <p class="featured-entry-meta">$52.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured products grid-->
+    <section class="container pt-3 pb-4">
+        <h2 class="h3 text-center pb-4">기존 페이지</h2>
+        <div class="row">
+            <th:block th:each="item, status: ${items.getContent()}">
+                <div class="col-md-4 margin">
+                    <div class="card">
+                        <a th:href="'/item/' +${item.id}" class="text-dark">
+                            <img th:src="${item.imgUrl}" class="card-img-top" th:alt="${item.itemNm}" height="400">
+                            <div class="card-body">
+                                <h4 class="card-title">[[${item.itemNm}]]</h4>
+                                <p class="card-text">[[${item.itemDetail}]]</p>
+                                <h3 class="card-title text-danger">[[${item.price}]]원</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+
+        <div th:with="start=${(items.number/maxPage)*maxPage + 1}, end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
+            <ul class="pagination justify-content-center">
+
+                <li class="page-item" th:classappend="${items.number eq 0}?'disabled':''">
+                    <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number - 1}}" aria-label='Previous' class="page-link">
+                        <span aria-hidden='true'>Previous</span>
+                    </a>
+                </li>
+
+                <li class="page-item" th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page - 1}?'active':''">
+                    <a th:href="@{'/' +'?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${page - 1}}" th:inline="text" class="page-link">[[${page}]]</a>
+                </li>
+
+                <li class="page-item" th:classappend="${items.number+1 ge items.totalPages}?'disabled':''">
+                    <a th:href="@{'/' +'?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number+1}}" aria-label='Next' class="page-link">
+                        <span aria-hidden='true'>Next</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+</div>
